@@ -1,14 +1,30 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import cars from "../data/cars";
+import SearchBar from "../components/SearchBar";
 
 export default function Cars() {
+  const [filteredCars, setFilteredCars] = useState(cars);
+
+  function handleSearch(query) {
+    const q = query.toLowerCase();
+    setFilteredCars(
+      cars.filter(
+        (car) =>
+          car.name.toLowerCase().includes(q) ||
+          (car.brand && car.brand.toLowerCase().includes(q))
+      )
+    );
+  }
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
       <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-8 text-center">
         Browse Cars
       </h1>
+      <SearchBar onSearch={handleSearch} />
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {cars.map((car) => (
+        {filteredCars.map((car) => (
           <div
             key={car.id}
             className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col"
