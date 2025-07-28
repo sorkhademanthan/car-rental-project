@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Cars from "./pages/Cars";
 import CarDetails from "./pages/CarDetails";
 import Booking from "./pages/Booking";
+import BookingSuccess from "./pages/BookingSuccess";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/cars" element={<Cars />} />
             <Route path="/cars/:id" element={<CarDetails />} />
             <Route path="/booking" element={<Booking />} />
+            <Route path="/booking/success" element={<BookingSuccess />} />
           </Routes>
         </main>
         <Footer />
@@ -24,4 +26,3 @@ export default function App() {
     </Router>
   );
 }
-      
