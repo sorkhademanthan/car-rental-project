@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Locations from "./pages/Locations";
 import Favorites from "./pages/Favorites";
 import WhyChooseUs from "./pages/WhyChooseUs";
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />

@@ -2,65 +2,54 @@ import { FaRegCalendarCheck, FaRupeeSign, FaHeadset, FaCarSide } from "react-ico
 
 const features = [
 	{
-		icon: <FaRegCalendarCheck className="text-blue-600 text-5xl mb-4 drop-shadow" />,
-		title: "Effortless Booking",
-		desc: "Reserve your ride in seconds with our intuitive, streamlined booking experience. No paperwork, no hassle—just a few clicks and you’re ready to go.",
+		icon: <FaRegCalendarCheck className="text-blue-600 text-4xl mb-3" />,
+		title: "Book Instantly",
+		desc: "Reserve your ride online in just a few clicks. No calls, no paperwork—just instant confirmation and flexible scheduling.",
 	},
 	{
-		icon: <FaRupeeSign className="text-blue-600 text-5xl mb-4 drop-shadow" />,
-		title: "Transparent Pricing",
-		desc: "Enjoy honest, upfront pricing with no hidden fees. Our best-rate guarantee means you always get the most value for your money.",
+		icon: <FaRupeeSign className="text-blue-600 text-4xl mb-3" />,
+		title: "No Hidden Fees",
+		desc: "Transparent pricing with no surprises. What you see is what you pay, every time you book.",
 	},
 	{
-		icon: <FaHeadset className="text-blue-600 text-5xl mb-4 drop-shadow" />,
-		title: "24/7 Human Support",
-		desc: "Questions? Emergencies? Our friendly team is here for you around the clock—before, during, and after your trip.",
+		icon: <FaHeadset className="text-blue-600 text-4xl mb-3" />,
+		title: "24/7 Support",
+		desc: "Our friendly team is here for you day and night. Get help, change plans, or ask questions anytime.",
 	},
 	{
-		icon: <FaCarSide className="text-blue-600 text-5xl mb-4 drop-shadow" />,
-		title: "Immaculate Fleet",
-		desc: "Drive with confidence in our meticulously maintained, sanitized, and modern vehicles. Safety and comfort are our top priorities.",
+		icon: <FaCarSide className="text-blue-600 text-4xl mb-3" />,
+		title: "Top Condition Cars",
+		desc: "Drive with confidence in our clean, safe, and regularly serviced vehicles—ready for every journey.",
 	},
 ];
 
 export default function WhyChooseUs() {
 	return (
-		<section className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-200 flex flex-col items-center justify-center py-16 px-4">
-			{/* Hero Banner */}
-			<div className="w-full max-w-3xl mx-auto text-center mb-12">
-				<h1 className="text-4xl md:text-5xl font-extrabold text-blue-800 mb-4 drop-shadow">
-					The VroomHub Promise
-				</h1>
-				<p className="text-lg md:text-xl text-gray-700 mb-2">
-					Renting a car should be simple, safe, and stress-free.
-				</p>
-				<p className="text-gray-500">
-					Here’s why thousands trust VroomHub for their journeys—across the city or across the country.
-				</p>
-			</div>
-			{/* Features Grid */}
-			<div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 w-full max-w-6xl">
+		<section className="w-full bg-gradient-to-br from-blue-50 to-blue-200 py-16 px-4 flex flex-col items-center">
+			<h2 className="text-3xl md:text-4xl font-extrabold text-blue-800 mb-2 text-center drop-shadow">
+				Why VroomHub?
+			</h2>
+			<p className="text-gray-600 text-center mb-10 max-w-xl">
+				The fastest, fairest, and friendliest way to rent a car.
+			</p>
+			<div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4 w-full max-w-5xl">
 				{features.map((feature, idx) => (
 					<div
 						key={idx}
-						className="bg-white/90 backdrop-blur rounded-2xl shadow-xl p-8 flex flex-col items-center text-center border border-blue-100 hover:shadow-2xl transition-all duration-200 hover:-translate-y-2"
+						className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center border border-blue-100 hover:shadow-2xl transition-all duration-200 hover:-translate-y-1"
 					>
 						{feature.icon}
-						<h3 className="text-xl font-bold text-blue-800 mb-2">{feature.title}</h3>
-						<p className="text-gray-600">{feature.desc}</p>
+						<h3 className="text-lg font-bold text-blue-800 mb-1">{feature.title}</h3>
+						<p className="text-gray-600 text-sm">{feature.desc}</p>
 					</div>
 				))}
 			</div>
-			{/* Call to Action */}
-			<div className="mt-16 text-center">
-				<h2 className="text-2xl font-bold text-blue-700 mb-4">Ready for your next adventure?</h2>
-				<a
-					href="/cars"
-					className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-colors duration-200"
-				>
-					Explore Our Cars
-				</a>
-			</div>
+			<a
+				href="/cars"
+				className="mt-12 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-colors duration-200"
+			>
+				Find Your Car
+			</a>
 		</section>
 	);
 }
