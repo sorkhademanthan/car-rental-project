@@ -64,20 +64,12 @@ export default function Navbar() {
           Book Now
         </Link>
         <Link
-          to="/faq"
+          to="/favorites"
           className="hover:text-blue-500 dark:hover:text-blue-300"
           role="menuitem"
           tabIndex={0}
         >
-          FAQ
-        </Link>
-        <Link
-          to="/contact"
-          className="hover:text-blue-500 dark:hover:text-blue-300"
-          role="menuitem"
-          tabIndex={0}
-        >
-          Contact
+          Favorites
         </Link>
         <Link
           to="/profile"
@@ -160,22 +152,13 @@ export default function Navbar() {
             Book Now
           </Link>
           <Link
-            to="/faq"
+            to="/favorites"
             className="py-2"
             onClick={() => setMenuOpen(false)}
             role="menuitem"
             tabIndex={0}
           >
-            FAQ
-          </Link>
-          <Link
-            to="/contact"
-            className="py-2"
-            onClick={() => setMenuOpen(false)}
-            role="menuitem"
-            tabIndex={0}
-          >
-            Contact
+            Favorites
           </Link>
           <Link
             to="/profile"

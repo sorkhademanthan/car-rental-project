@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import cars from "../data/cars";
 import SearchBar from "../components/SearchBar";
@@ -11,6 +11,13 @@ export default function Cars() {
   const [brand, setBrand] = useState("");
   const [sort, setSort] = useState("");
   const [priceRange, setPriceRange] = useState("");
+  const [favorites, setFavorites] = useState(() =>
+    JSON.parse(localStorage.getItem("favorites") || "[]")
+  );
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   function handleSearch(query) {
     const q = query.toLowerCase();
@@ -30,6 +37,14 @@ export default function Cars() {
   function handlePriceChange(e) {
     setPriceRange(e.target.value);
     filterAndSortCars("", brand, e.target.value, sort);
+  }
+
+  function toggleFavorite(carId) {
+    setFavorites((prev) =>
+      prev.includes(carId)
+        ? prev.filter((id) => id !== carId)
+        : [...prev, carId]
+    );
   }
 
   function filterAndSortCars(query, brand, priceRange, sort) {
@@ -139,6 +154,14 @@ export default function Cars() {
               <p className="text-blue-600 font-bold mt-2">
                 ${car.pricePerDay}/day
               </p>
+              <button
+                onClick={() => toggleFavorite(car.id)}
+                className={`mb-2 self-end text-xl ${favorites.includes(car.id) ? "text-red-500" : "text-gray-400"} hover:text-red-600`}
+                aria-label={favorites.includes(car.id) ? "Remove from favorites" : "Add to favorites"}
+                title={favorites.includes(car.id) ? "Remove from favorites" : "Add to favorites"}
+              >
+                {favorites.includes(car.id) ? "♥" : "♡"}
+              </button>
               <Link
                 to={`/cars/${car.id}`}
                 className="mt-auto bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center font-medium transition-colors duration-200"

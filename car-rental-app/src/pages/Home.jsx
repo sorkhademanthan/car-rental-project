@@ -2,6 +2,9 @@ import HeroSection from "../components/HeroSection";
 import PopularCars from "../components/PopularCars";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
+import Locations from "../pages/Locations";
+import Faq from "../pages/Faq";
+import Contact from "../pages/Contact";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
         <PopularCars />
         <WhyChooseUs />
         <Testimonials />
+        <Locations />
+        <Faq />
+        <Contact />
         {/* Other sections will be added here in the next steps */}
       </div>
     </div>
