@@ -1,6 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import PopularCars from "../components/PopularCars";
-import WhyChooseUs from "../components/WhyChooseUs";
+import WhyChooseUs from "../pages/WhyChooseUs";
 import Testimonials from "../components/Testimonials";
 import Locations from "../pages/Locations";
 import Faq from "../pages/Faq";

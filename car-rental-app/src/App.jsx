@@ -15,6 +15,7 @@ import Profile from "./pages/Profile";
 import Blog from "./pages/Blog";
 import Locations from "./pages/Locations";
 import Favorites from "./pages/Favorites";
+import WhyChooseUs from "./pages/WhyChooseUs";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/why-choose-us" element={<WhyChooseUs />} />
           </Routes>
         </main>
         <Footer />
