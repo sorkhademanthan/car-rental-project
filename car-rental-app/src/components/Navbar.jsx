@@ -14,19 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(() =>
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
   const location = useLocation();
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   // Prevent background scroll when mobile menu is open
   useEffect(() => {
@@ -45,21 +33,17 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  function toggleDarkMode() {
-    setDarkMode((prev) => !prev);
-  }
-
   return (
     <header className="sticky top-0 z-50 w-full">
       <nav
-        className="backdrop-blur bg-white/80 dark:bg-gray-900/80 shadow-lg border-b border-blue-100 dark:border-gray-800 px-4 py-3 flex items-center justify-between transition-all duration-300"
+        className="backdrop-blur bg-white/80 shadow-lg border-b border-blue-100 px-4 py-3 flex items-center justify-between transition-all duration-300"
         role="navigation"
         aria-label="Main Navigation"
       >
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight flex items-center gap-2"
+          className="text-2xl font-extrabold text-blue-700 tracking-tight flex items-center gap-2"
           tabIndex={0}
         >
           <span className="inline-block w-8 h-8 bg-blue-600 rounded-full mr-2 shadow-lg"></span>
@@ -74,22 +58,13 @@ export default function Navbar() {
               className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
                 location.pathname === link.to
                   ? "bg-blue-600 text-white shadow"
-                  : "text-blue-700 dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-gray-800"
+                  : "text-blue-700 hover:bg-blue-100"
               }`}
               tabIndex={0}
             >
               {link.label}
             </Link>
           ))}
-          <button
-            className="ml-2 px-3 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            title="Toggle dark mode"
-            aria-label="Toggle dark mode"
-            onClick={toggleDarkMode}
-            tabIndex={0}
-          >
-            {darkMode ? "🌞" : "🌙"}
-          </button>
         </div>
         {/* Hamburger */}
         <button
@@ -100,9 +75,9 @@ export default function Navbar() {
           aria-controls="mobile-menu"
         >
           {menuOpen ? (
-            <FaTimes className="text-2xl text-blue-700 dark:text-blue-200" />
+            <FaTimes className="text-2xl text-blue-700" />
           ) : (
-            <FaBars className="text-2xl text-blue-700 dark:text-blue-200" />
+            <FaBars className="text-2xl text-blue-700" />
           )}
         </button>
         {/* Mobile Menu Overlay */}
@@ -115,7 +90,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <aside
           id="mobile-menu"
-          className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white dark:bg-gray-900 shadow-lg flex flex-col items-center pt-24 gap-6 transition-transform duration-300 md:hidden ${
+          className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-white shadow-lg flex flex-col items-center pt-24 gap-6 transition-transform duration-300 md:hidden ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           role="menu"
@@ -128,7 +103,7 @@ export default function Navbar() {
               className={`text-lg w-full text-center px-6 py-4 rounded-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
                 location.pathname === link.to
                   ? "bg-blue-600 text-white shadow"
-                  : "text-blue-700 dark:text-blue-200 hover:bg-blue-100 dark:hover:bg-gray-800"
+                  : "text-blue-700 hover:bg-blue-100"
               }`}
               role="menuitem"
               tabIndex={0}
@@ -137,15 +112,6 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button
-            className="mt-4 px-4 py-2 rounded-lg hover:bg-blue-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            title="Toggle dark mode"
-            aria-label="Toggle dark mode"
-            onClick={toggleDarkMode}
-            tabIndex={0}
-          >
-            {darkMode ? "🌞" : "🌙"}
-          </button>
         </aside>
       </nav>
     </header>
