@@ -1,507 +1,436 @@
 const cars = [
   {
-    "id": 1,
-    "name": "Audi A4",
-    "pricePerDay": 36,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
+    id: 1,
+    name: "Audi A4",
+    brand: "Audi",
+    pricePerDay: 36,
+    images: [
+      "/images/audi/audi1.jpg",
+      "/images/audi/audi2.jpg",
+      "/images/audi/audi3.jpg"
     ],
-    "popular": true
+    popular: true,
   },
   {
-    "id": 2,
-    "name": "Audi A3",
-    "pricePerDay": 43,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80"
+    id: 2,
+    name: "Audi A3",
+    brand: "Audi",
+    pricePerDay: 43,
+    images: [
+      "/images/audi/audi4.jpg",
+      "/images/audi/audi5.jpg",
+      "/images/audi/audi6.jpg"
     ],
-    "popular": true
+    popular: true,
   },
   {
-    "id": 3,
-    "name": "Nissan Rogue",
-    "pricePerDay": 37,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Chevrolet Cruze",
-    "pricePerDay": 92,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "BMW 3 Series",
-    "pricePerDay": 52,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
+    id: 5,
+    name: "BMW 3 Series",
+    brand: "BMW",
+    pricePerDay: 52,
+    images: [
+      "/images/bmw/bmw1.jpg",
+      "/images/bmw/bmw2.jpg",
+      "/images/bmw/bmw3.jpg"
     ],
-    "popular": true
+    popular: true,
   },
   {
-    "id": 6,
-    "name": "Nissan Rogue",
-    "pricePerDay": 62,
-    "images": [
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Honda Accord",
-    "pricePerDay": 31,
-    "images": [
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Honda CR-V",
-    "pricePerDay": 48,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Audi Q7",
-    "pricePerDay": 65,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 10,
-    "name": "Honda CR-V",
-    "pricePerDay": 89,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 11,
-    "name": "Tesla Model Y",
-    "pricePerDay": 84,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80"
+    id: 13,
+    name: "BMW X3",
+    brand: "BMW",
+    pricePerDay: 65,
+    images: [
+      "/images/bmw/bmw4.jpg",
+      "/images/bmw/bmw5.jpg",
+      "/images/bmw/bmw6.jpg"
     ],
-    "popular": true
   },
   {
-    "id": 12,
-    "name": "Honda Civic",
-    "pricePerDay": 85,
-    "images": [
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 11,
+    name: "Tesla Model Y",
+    brand: "Tesla",
+    pricePerDay: 84,
+    images: [
+      "/images/tesla/tesla1.jpg",
+      "/images/tesla/tesla2.jpg",
+      "/images/tesla/tesla3.jpg"
+    ],
+    popular: true,
   },
   {
-    "id": 13,
-    "name": "BMW X3",
-    "pricePerDay": 65,
-    "images": [
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 17,
+    name: "Tesla Model 3",
+    brand: "Tesla",
+    pricePerDay: 43,
+    images: [
+      "/images/tesla/tesla4.jpg",
+      "/images/tesla/tesla5.jpg",
+      "/images/tesla/tesla6.jpg"
+    ],
   },
   {
-    "id": 14,
-    "name": "Chevrolet Impala",
-    "pricePerDay": 76,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 22,
+    name: "Tesla Model S",
+    brand: "Tesla",
+    pricePerDay: 78,
+    images: [
+      "/images/tesla/tesla1.jpg",
+      "/images/tesla/tesla2.jpg",
+      "/images/tesla/tesla3.jpg"
+    ],
   },
   {
-    "id": 15,
-    "name": "Ford Fusion",
-    "pricePerDay": 103,
-    "images": [
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 16,
+    name: "Tesla Model X",
+    brand: "Tesla",
+    pricePerDay: 120,
+    images: [
+      "/images/tesla/tesla4.jpg",
+      "/images/tesla/tesla5.jpg",
+      "/images/tesla/tesla6.jpg"
+    ],
   },
   {
-    "id": 16,
-    "name": "Tesla Model X",
-    "pricePerDay": 120,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 7,
+    name: "Honda Accord",
+    brand: "Honda",
+    pricePerDay: 31,
+    images: [
+      "/images/honda/honda1.jpg",
+      "/images/honda/honda2.jpg",
+      "/images/honda/honda3.jpg"
+    ],
   },
   {
-    "id": 17,
-    "name": "Tesla Model 3",
-    "pricePerDay": 43,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 8,
+    name: "Honda CR-V",
+    brand: "Honda",
+    pricePerDay: 48,
+    images: [
+      "/images/honda/honda4.jpg",
+      "/images/honda/honda5.jpg",
+      "/images/honda/honda6.jpg"
+    ],
   },
   {
-    "id": 18,
-    "name": "BMW X3",
-    "pricePerDay": 50,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 12,
+    name: "Honda Civic",
+    brand: "Honda",
+    pricePerDay: 85,
+    images: [
+      "/images/honda/honda1.jpg",
+      "/images/honda/honda2.jpg",
+      "/images/honda/honda3.jpg"
+    ],
   },
   {
-    "id": 19,
-    "name": "Tesla Model 3",
-    "pricePerDay": 94,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 31,
+    name: "Honda Fit",
+    brand: "Honda",
+    pricePerDay: 113,
+    images: [
+      "/images/honda/honda4.jpg",
+      "/images/honda/honda5.jpg",
+      "/images/honda/honda6.jpg"
+    ],
   },
   {
-    "id": 20,
-    "name": "Chevrolet Equinox",
-    "pricePerDay": 38,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 3,
+    name: "Nissan Rogue",
+    brand: "Nissan",
+    pricePerDay: 37,
+    images: [
+      "/images/nissan/nissan1.jpg",
+      "/images/nissan/nissan2.jpg",
+      "/images/nissan/nissan3.jpg"
+    ],
   },
   {
-    "id": 21,
-    "name": "Nissan Altima",
-    "pricePerDay": 31,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 21,
+    name: "Nissan Altima",
+    brand: "Nissan",
+    pricePerDay: 31,
+    images: [
+      "/images/nissan/nissan4.jpg",
+      "/images/nissan/nissan5.jpg",
+      "/images/nissan/nissan6.jpg"
+    ],
   },
   {
-    "id": 22,
-    "name": "Tesla Model S",
-    "pricePerDay": 78,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 37,
+    name: "Nissan Leaf",
+    brand: "Nissan",
+    pricePerDay: 67,
+    images: [
+      "/images/nissan/nissan1.jpg",
+      "/images/nissan/nissan2.jpg",
+      "/images/nissan/nissan3.jpg"
+    ],
   },
   {
-    "id": 23,
-    "name": "Audi A3",
-    "pricePerDay": 77,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 4,
+    name: "Chevrolet Cruze",
+    brand: "Chevrolet",
+    pricePerDay: 92,
+    images: [
+      "/images/chevrolet/chevrolet1.jpg",
+      "/images/chevrolet/chevrolet2.jpg",
+      "/images/chevrolet/chevrolet3.jpg"
+    ],
   },
   {
-    "id": 24,
-    "name": "BMW 5 Series",
-    "pricePerDay": 35,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 14,
+    name: "Chevrolet Impala",
+    brand: "Chevrolet",
+    pricePerDay: 76,
+    images: [
+      "/images/chevrolet/chevrolet4.jpg",
+      "/images/chevrolet/chevrolet5.jpg",
+      "/images/chevrolet/chevrolet6.jpg"
+    ],
   },
   {
-    "id": 25,
-    "name": "Mercedes E-Class",
-    "pricePerDay": 34,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 20,
+    name: "Chevrolet Equinox",
+    brand: "Chevrolet",
+    pricePerDay: 38,
+    images: [
+      "/images/chevrolet/chevrolet1.jpg",
+      "/images/chevrolet/chevrolet2.jpg",
+      "/images/chevrolet/chevrolet3.jpg"
+    ],
   },
   {
-    "id": 26,
-    "name": "Mercedes GLA",
-    "pricePerDay": 70,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 24,
+    name: "BMW 5 Series",
+    brand: "BMW",
+    pricePerDay: 35,
+    images: [
+      "/images/bmw/bmw1.jpg",
+      "/images/bmw/bmw2.jpg",
+      "/images/bmw/bmw3.jpg"
+    ],
   },
   {
-    "id": 27,
-    "name": "Toyota RAV4",
-    "pricePerDay": 120,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 25,
+    name: "Mercedes E-Class",
+    brand: "Mercedes",
+    pricePerDay: 34,
+    images: [
+      "/images/mercedes/mercedes1.jpg",
+      "/images/mercedes/mercedes2.jpg",
+      "/images/mercedes/mercedes3.jpg"
+    ],
   },
   {
-    "id": 28,
-    "name": "Ford Escape",
-    "pricePerDay": 71,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 26,
+    name: "Mercedes GLA",
+    brand: "Mercedes",
+    pricePerDay: 70,
+    images: [
+      "/images/mercedes/mercedes4.jpg",
+      "/images/mercedes/mercedes5.jpg",
+      "/images/mercedes/mercedes6.jpg"
+    ],
   },
   {
-    "id": 29,
-    "name": "Nissan Rogue",
-    "pricePerDay": 99,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 32,
+    name: "Mercedes C-Class",
+    brand: "Mercedes",
+    pricePerDay: 34,
+    images: [
+      "/images/mercedes/mercedes1.jpg",
+      "/images/mercedes/mercedes2.jpg",
+      "/images/mercedes/mercedes3.jpg"
+    ],
   },
   {
-    "id": 30,
-    "name": "Audi Q7",
-    "pricePerDay": 100,
-    "images": [
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 33,
+    name: "BMW X3",
+    brand: "BMW",
+    pricePerDay: 87,
+    images: [
+      "/images/bmw/bmw4.jpg",
+      "/images/bmw/bmw5.jpg",
+      "/images/bmw/bmw6.jpg"
+    ],
   },
   {
-    "id": 31,
-    "name": "Honda Fit",
-    "pricePerDay": 113,
-    "images": [
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 34,
+    name: "Honda Accord",
+    brand: "Honda",
+    pricePerDay: 118,
+    images: [
+      "/images/honda/honda1.jpg",
+      "/images/honda/honda2.jpg",
+      "/images/honda/honda3.jpg"
+    ],
   },
   {
-    "id": 32,
-    "name": "Mercedes C-Class",
-    "pricePerDay": 34,
-    "images": [
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 35,
+    name: "Audi A4",
+    brand: "Audi",
+    pricePerDay: 40,
+    images: [
+      "/images/audi/audi1.jpg",
+      "/images/audi/audi2.jpg",
+      "/images/audi/audi3.jpg"
+    ],
   },
   {
-    "id": 33,
-    "name": "BMW X3",
-    "pricePerDay": 87,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 36,
+    name: "Honda Fit",
+    brand: "Honda",
+    pricePerDay: 54,
+    images: [
+      "/images/honda/honda4.jpg",
+      "/images/honda/honda5.jpg",
+      "/images/honda/honda6.jpg"
+    ],
   },
   {
-    "id": 34,
-    "name": "Honda Accord",
-    "pricePerDay": 118,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 38,
+    name: "Tesla Model 3",
+    brand: "Tesla",
+    pricePerDay: 64,
+    images: [
+      "/images/tesla/tesla4.jpg",
+      "/images/tesla/tesla5.jpg",
+      "/images/tesla/tesla6.jpg"
+    ],
   },
   {
-    "id": 35,
-    "name": "Audi A4",
-    "pricePerDay": 40,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 39,
+    name: "Ford Focus",
+    brand: "Ford",
+    pricePerDay: 92,
+    images: [
+      "/images/ford/ford1.jpg",
+      "/images/ford/ford2.jpg",
+      "/images/ford/ford3.jpg"
+    ],
   },
   {
-    "id": 36,
-    "name": "Honda Fit",
-    "pricePerDay": 54,
-    "images": [
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 40,
+    name: "Hyundai Elantra",
+    brand: "Hyundai",
+    pricePerDay: 101,
+    images: [
+      "/images/hyundai/hyundai1.jpg",
+      "/images/hyundai/hyundai2.jpg",
+      "/images/hyundai/hyundai3.jpg"
+    ],
   },
   {
-    "id": 37,
-    "name": "Nissan Leaf",
-    "pricePerDay": 67,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 41,
+    name: "Honda Fit",
+    brand: "Honda",
+    pricePerDay: 85,
+    images: [
+      "/images/honda/honda4.jpg",
+      "/images/honda/honda5.jpg",
+      "/images/honda/honda6.jpg"
+    ],
   },
   {
-    "id": 38,
-    "name": "Tesla Model 3",
-    "pricePerDay": 64,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 42,
+    name: "Mercedes C-Class",
+    brand: "Mercedes",
+    pricePerDay: 74,
+    images: [
+      "/images/mercedes/mercedes1.jpg",
+      "/images/mercedes/mercedes2.jpg",
+      "/images/mercedes/mercedes3.jpg"
+    ],
   },
   {
-    "id": 39,
-    "name": "Ford Focus",
-    "pricePerDay": 92,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 43,
+    name: "BMW 3 Series",
+    brand: "BMW",
+    pricePerDay: 118,
+    images: [
+      "/images/bmw/bmw1.jpg",
+      "/images/bmw/bmw2.jpg",
+      "/images/bmw/bmw3.jpg"
+    ],
   },
   {
-    "id": 40,
-    "name": "Hyundai Elantra",
-    "pricePerDay": 101,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 44,
+    name: "Toyota RAV4",
+    brand: "Toyota",
+    pricePerDay: 41,
+    images: [
+      "/images/toyota/toyota1.jpg",
+      "/images/toyota/toyota2.jpg",
+      "/images/toyota/toyota3.jpg"
+    ],
   },
   {
-    "id": 41,
-    "name": "Honda Fit",
-    "pricePerDay": 85,
-    "images": [
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 45,
+    name: "Mercedes GLC",
+    brand: "Mercedes",
+    pricePerDay: 43,
+    images: [
+      "/images/mercedes/mercedes4.jpg",
+      "/images/mercedes/mercedes5.jpg",
+      "/images/mercedes/mercedes6.jpg"
+    ],
   },
   {
-    "id": 42,
-    "name": "Mercedes C-Class",
-    "pricePerDay": 74,
-    "images": [
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 46,
+    name: "Hyundai Santa Fe",
+    brand: "Hyundai",
+    pricePerDay: 70,
+    images: [
+      "/images/hyundai/hyundai1.jpg",
+      "/images/hyundai/hyundai2.jpg",
+      "/images/hyundai/hyundai3.jpg"
+    ],
   },
   {
-    "id": 43,
-    "name": "BMW 3 Series",
-    "pricePerDay": 118,
-    "images": [
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604014237744-6592a5419d55?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 47,
+    name: "Audi Q5",
+    brand: "Audi",
+    pricePerDay: 101,
+    images: [
+      "/images/audi/audi4.jpg",
+      "/images/audi/audi5.jpg",
+      "/images/audi/audi6.jpg"
+    ],
   },
   {
-    "id": 44,
-    "name": "Toyota RAV4",
-    "pricePerDay": 41,
-    "images": [
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 48,
+    name: "Toyota Corolla",
+    brand: "Toyota",
+    pricePerDay: 56,
+    images: [
+      "/images/toyota/toyota1.jpg",
+      "/images/toyota/toyota2.jpg",
+      "/images/toyota/toyota3.jpg"
+    ],
   },
   {
-    "id": 45,
-    "name": "Mercedes GLC",
-    "pricePerDay": 43,
-    "images": [
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 49,
+    name: "Honda Civic",
+    brand: "Honda",
+    pricePerDay: 62,
+    images: [
+      "/images/honda/honda1.jpg",
+      "/images/honda/honda2.jpg",
+      "/images/honda/honda3.jpg"
+    ],
   },
   {
-    "id": 46,
-    "name": "Hyundai Santa Fe",
-    "pricePerDay": 70,
-    "images": [
-      "https://images.unsplash.com/photo-1583267748596-cd5c07f7f5d4?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 47,
-    "name": "Audi Q5",
-    "pricePerDay": 101,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 48,
-    "name": "Toyota Corolla",
-    "pricePerDay": 56,
-    "images": [
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 49,
-    "name": "Honda Civic",
-    "pricePerDay": 62,
-    "images": [
-      "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1617854225381-107c4ccdc76c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  {
-    "id": 50,
-    "name": "Tesla Model 3",
-    "pricePerDay": 79,
-    "images": [
-      "https://images.unsplash.com/photo-1511391403515-5c1b6c11c5b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1563720226889-b9b6f0e3d301?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1612392061783-df4f2a54b6ef?auto=format&fit=crop&w=600&q=80"
-    ]
+    id: 50,
+    name: "Tesla Model 3",
+    brand: "Tesla",
+    pricePerDay: 79,
+    images: [
+      "/images/tesla/tesla4.jpg",
+      "/images/tesla/tesla5.jpg",
+      "/images/tesla/tesla6.jpg"
+    ],
   }
 ]
 export default cars;
