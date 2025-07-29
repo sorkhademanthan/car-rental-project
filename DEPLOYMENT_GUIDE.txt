@@ -1,0 +1,35 @@
+# Deployment Guide for Your Car Rental App
+
+1. **Build your app for production:**
+   - Open a terminal in your project folder.
+   - Run: `npm run build`
+   - This will create a `dist` or `build` folder with optimized production files.
+
+2. **Preview your build locally (optional):**
+   - Run: `npm install -g serve`
+   - Then: `serve -s build` (or `serve -s dist`)
+
+3. **Deploy to a static host:**
+   - You can use Vercel, Netlify, GitHub Pages, or any static hosting provider.
+   - For Vercel/Netlify:
+     - Sign up and connect your GitHub repo.
+     - Set build command: `npm run build`
+     - Set output directory: `build` (or `dist`)
+     - Deploy!
+
+4. **Custom domain:**
+   - Add your custom domain in your hosting provider’s dashboard.
+
+5. **Environment variables (if needed):**
+   - Set any required environment variables in your host’s settings.
+
+6. **Backend/API:**
+   - If you add backend integration, deploy your backend separately (e.g., on Vercel, Heroku, or AWS).
+
+7. **Final checks:**
+   - Test your site on mobile and desktop.
+   - Check all links, forms, and images.
+
+8. **Share your live URL!**
+
+# Your app is now ready for the world.

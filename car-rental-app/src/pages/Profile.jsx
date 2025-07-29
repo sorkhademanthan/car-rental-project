@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaUserEdit, FaCheckCircle, FaClock, FaCarSide, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 export default function Profile() {
@@ -9,42 +9,37 @@ export default function Profile() {
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   });
   const [edit, setEdit] = useState(false);
-  const [bookings, setBookings] = useState([]);
 
-  useEffect(() => {
-    // Get current booking from localStorage (set in Booking.jsx)
-    const currentBooking = JSON.parse(localStorage.getItem("currentBooking") || "null");
-    // Example: You can also fetch past bookings from backend here
-    let mockBookings = [
+  // Get current booking from localStorage (set in Booking.jsx)
+  const currentBooking = JSON.parse(localStorage.getItem("currentBooking") || "null");
+  let bookings = [
+    {
+      id: "BKG12345",
+      car: "Audi A4",
+      date: "2024-06-10",
+      status: "Completed",
+      price: 80,
+    },
+    {
+      id: "BKG12346",
+      car: "Tesla Model Y",
+      date: "2024-07-01",
+      status: "Upcoming",
+      price: 120,
+    },
+  ];
+  if (currentBooking) {
+    bookings = [
       {
-        id: "BKG12345",
-        car: "Audi A4",
-        date: "2024-06-10",
-        status: "Completed",
-        price: 80,
-      },
-      {
-        id: "BKG12346",
-        car: "Tesla Model Y",
-        date: "2024-07-01",
+        id: "BKG" + Math.floor(Math.random() * 100000),
+        car: currentBooking.carName,
+        date: currentBooking.pickupDate,
         status: "Upcoming",
-        price: 120,
+        price: currentBooking.total,
       },
+      ...bookings,
     ];
-    if (currentBooking) {
-      mockBookings = [
-        {
-          id: "BKG" + Math.floor(Math.random() * 100000),
-          car: currentBooking.carName,
-          date: currentBooking.pickupDate,
-          status: "Upcoming",
-          price: currentBooking.total,
-        },
-        ...mockBookings,
-      ];
-    }
-    setBookings(mockBookings);
-  }, []);
+  }
 
   function handleChange(e) {
     setProfile({ ...profile, [e.target.name]: e.target.value });
@@ -58,7 +53,7 @@ export default function Profile() {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-16 px-4 flex flex-col items-center">
-      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8 md:p-12 flex flex-col items-center">
+      <div className="w-full max-w-2xl bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col items-center border border-blue-100">
         {/* Avatar & Edit */}
         <div className="relative mb-6">
           <img
@@ -78,7 +73,7 @@ export default function Profile() {
         {/* Profile Info */}
         {!edit ? (
           <div className="w-full flex flex-col items-center mb-6">
-            <h2 className="text-2xl font-bold text-blue-800 mb-1">{profile.name}</h2>
+            <h2 className="text-2xl font-extrabold text-blue-800 mb-1">{profile.name}</h2>
             <div className="flex items-center gap-2 text-gray-600 mb-1">
               <FaEnvelope className="text-blue-400" /> {profile.email}
             </div>
@@ -135,7 +130,7 @@ export default function Profile() {
               {bookings.map((b, idx) => (
                 <div
                   key={b.id + idx}
-                  className="flex flex-col sm:flex-row items-center justify-between bg-blue-50 rounded-lg p-4 shadow"
+                  className="flex flex-col sm:flex-row items-center justify-between bg-blue-50 rounded-xl p-4 shadow border border-blue-100"
                 >
                   <div className="flex flex-col sm:flex-row items-center gap-4">
                     <span className="font-semibold text-blue-800">{b.car}</span>
@@ -162,3 +157,4 @@ export default function Profile() {
     </section>
   );
 }
+ 
