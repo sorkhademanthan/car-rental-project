@@ -43,9 +43,7 @@ export default function Navbar() {
           <span className="inline-block bg-white rounded-full p-2 shadow-lg">
             <FaCarSide size={28} className="text-blue-700" />
           </span>
-          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-white drop-shadow">
-            DriveEase
-          </span>
+          <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-white drop-shadow">DriveEase</span>
         </Link>
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-2">

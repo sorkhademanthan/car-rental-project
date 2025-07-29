@@ -3,9 +3,9 @@ import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
 	{
-		question: "How do I book a car with VroomHub?",
+		question: "How do I book a car?",
 		answer:
-			"Browse our fleet, select your preferred car, choose your dates, and complete the booking form. You'll receive instant confirmation and all details by email.",
+			"Simply browse cars on DriveEase, select your preferred model, and complete the booking form. You'll receive instant confirmation and all details by email.",
 	},
 	{
 		question: "What documents are required for pickup?",

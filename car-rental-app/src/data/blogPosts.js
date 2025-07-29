@@ -24,7 +24,7 @@ const posts = [
     excerpt: "The right car can make or break your journey. Here’s how to pick the perfect ride—every time.",
     date: "2024-05-20",
     author: "Team VroomHub",
-    image: "https://images.unsplash.com/photo-1461632830798-3adb3034e4c8?auto=format&fit=crop&w=600&q=80",
+    image: "/images/mercedes/mercedes5.jpg",
     content: `
       <p><strong>Let’s get real:</strong> Not all cars are created equal. And the car you choose can turn a good trip into a great one—or a disaster. The secret? Match your car to your journey, not just your budget.</p>
       <p><strong>City Drives:</strong> If you’re weaving through traffic and squeezing into tight parking spots, a compact hatchback is your best friend. Easy to drive, easy to park, and easy on your wallet. You’ll thank yourself every time you slip into a spot others have to pass by.</p>
@@ -40,7 +40,7 @@ const posts = [
     excerpt: "Discover why thousands trust VroomHub—no tricks, no traps, just total transparency and care.",
     date: "2024-05-10",
     author: "Team VroomHub",
-    image: "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=600&q=80",
+    image: "/images/tesla/tesla5.jpg",
     content: `
       <p><strong>Dear Friend,</strong></p>
       <p>Let’s face it—most car rental companies make big promises and deliver little. At VroomHub, we do things differently. Here’s our promise to you:</p>

@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="inline-block bg-white text-blue-700 rounded-full p-2 shadow-lg">
               <FaCarSide size={28} />
             </span>
-            <span className="text-2xl font-extrabold tracking-tight">VroomHub</span>
+            <span className="text-2xl font-extrabold tracking-tight">DriveEase</span>
           </div>
           <p className="text-blue-100 max-w-xs text-center md:text-left">
             Drive bold. Arrive inspired. India’s most trusted car rental platform.
@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="flex-1 flex flex-col items-center md:items-end gap-4">
           <div>
             <h4 className="font-bold mb-2 text-blue-100">Contact</h4>
-            <p className="text-blue-100 text-sm">support@vroomhub.com</p>
+            <p className="text-blue-100 text-sm">support@driveease.com</p>
             <p className="text-blue-100 text-sm">+91 98765 43210</p>
           </div>
           <div className="flex gap-4 mt-2">
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-10 border-t border-blue-400 pt-6 text-center text-blue-200 text-sm">
-        &copy; {new Date().getFullYear()} VroomHub. All rights reserved. | Made with <span className="text-red-400">♥</span> in India.
+        &copy; {new Date().getFullYear()} DriveEase. All rights reserved. | Made with <span className="text-red-400">♥</span> in India.
       </div>
     </footer>
   );

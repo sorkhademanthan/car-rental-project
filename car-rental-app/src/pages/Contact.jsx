@@ -100,7 +100,7 @@ export default function Contact() {
               <FaPhoneAlt /> <span>+91 98765 43210</span>
             </div>
             <div className="flex items-center gap-3 text-blue-700 text-base font-semibold">
-              <FaEnvelope /> <span>support@vroomhub.com</span>
+              <FaEnvelope /> <span>support@driveease.com</span>
             </div>
             <div className="bg-blue-50 rounded-lg p-4 text-blue-700 text-sm shadow w-full">
               <strong>Business Hours:</strong>
