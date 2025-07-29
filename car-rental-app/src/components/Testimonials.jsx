@@ -6,7 +6,7 @@ const testimonials = [
 	{
 		name: "Amit Sharma",
 		photo: "https://randomuser.me/api/portraits/men/32.jpg",
-		text: "VroomHub made my business trip effortless. The car was spotless, pickup was quick, and I felt valued every step of the way.",
+		text: "DriveEase made my business trip effortless. The car was spotless, pickup was quick, and I felt valued every step of the way.",
 		rating: 5,
 		city: "Mumbai",
 	},
@@ -20,7 +20,7 @@ const testimonials = [
 	{
 		name: "Rahul Verma",
 		photo: "https://randomuser.me/api/portraits/men/65.jpg",
-		text: "Booked in minutes, drove away in a clean, comfortable car. VroomHub is my go-to for every trip.",
+		text: "Booked in minutes, drove away in a clean, comfortable car. DriveEase is my go-to for every trip.",
 		rating: 5,
 		city: "Delhi",
 	},
@@ -48,7 +48,7 @@ const testimonials = [
 	{
 		name: "Arjun Desai",
 		photo: "https://randomuser.me/api/portraits/men/21.jpg",
-		text: "Transparent pricing, great support, and a wide range of cars. VroomHub exceeded my expectations.",
+		text: "Transparent pricing, great support, and a wide range of cars. DriveEase exceeded my expectations.",
 		rating: 5,
 		city: "Hyderabad",
 	},

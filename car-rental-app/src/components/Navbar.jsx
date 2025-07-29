@@ -44,7 +44,7 @@ export default function Navbar() {
             <FaCarSide size={28} className="text-blue-700" />
           </span>
           <span className="text-2xl md:text-3xl font-extrabold tracking-tight text-white drop-shadow">
-            VroomHub
+            DriveEase
           </span>
         </Link>
         {/* Desktop Menu */}

@@ -29,7 +29,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="flex-1">
             <h2 className="text-3xl font-extrabold text-blue-800 mb-6 text-center md:text-left drop-shadow-lg">
-              Contact VroomHub
+              Contact DriveEase
             </h2>
             {submitted && (
               <div className="mb-4 text-green-600 font-semibold text-center">

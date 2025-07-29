@@ -1,4 +1,4 @@
-# Deployment Guide for Your Car Rental App
+# Deployment Guide for Your DriveEase Car Rental App
 
 1. **Build your app for production:**
    - Open a terminal in your project folder.

@@ -1,4 +1,4 @@
-# VroomHub Car Rental App
+# DriveEase Car Rental App
 
 A world-class, fully responsive car rental platform built with React.
 
@@ -61,4 +61,4 @@ MIT
 
 ---
 
-**Made with ♥ by VroomHub**
+**Made with ♥ by DriveEase**
